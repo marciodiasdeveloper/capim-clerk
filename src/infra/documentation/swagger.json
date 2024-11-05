@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Madah Firebase Auth",
+    "title": "Madah clerk Auth",
     "description": "This is an Auth API",
     "version": "0.0.1",
     "contact": {

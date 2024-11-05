@@ -5,13 +5,13 @@ export const env = {
   internalToken: process.env.INTERNAL_TOKEN ?? '',
   environment: process.env.NODE_ENV ?? 'development',
   opentelemetry: process.env.OPEN_TELEMETRY ?? '',
-  firebase: {
-    apiKey: process.env.FIREBASE_API_KEY ?? '',
-    authDomain: process.env.FIREBASE_AUTH_DOMAIN ?? '',
-    projectId: process.env.FIREBASE_PROJECT_ID ?? '',
-    storageBucket: process.env.FIREBASE_STORAGE_BUCKET ?? '',
-    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID ?? '',
-    appId: process.env.FIREBASE_APP_ID ?? ''
+  clerk: {
+    apiKey: process.env.clerk_API_KEY ?? '',
+    authDomain: process.env.clerk_AUTH_DOMAIN ?? '',
+    projectId: process.env.clerk_PROJECT_ID ?? '',
+    storageBucket: process.env.clerk_STORAGE_BUCKET ?? '',
+    messagingSenderId: process.env.clerk_MESSAGING_SENDER_ID ?? '',
+    appId: process.env.clerk_APP_ID ?? ''
   },
   loki: {
     url: process.env.LOKI_URL ?? ''

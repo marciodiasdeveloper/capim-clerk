@@ -11,7 +11,7 @@
     "mocks",
     ".vscode",
     "node_modules",
-    "firebase",
+    "clerk",
     "coverage",
     "dist",
     ".husky"

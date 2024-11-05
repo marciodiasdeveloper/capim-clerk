@@ -1,10 +1,10 @@
-export interface FirebaseInitializeApp {
-  firebase: (input: FirebaseInitializeApp.Input) => Promise<FirebaseInitializeApp.Output>
+export interface clerkInitializeApp {
+  clerk: (input: clerkInitializeApp.Input) => Promise<clerkInitializeApp.Output>
 }
 
-export namespace FirebaseInitializeApp {
+export namespace clerkInitializeApp {
   export type Input = {
-    firebase: {
+    clerk: {
       _isDeleted: boolean
       _options: Options
       _config: Config

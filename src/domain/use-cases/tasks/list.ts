@@ -1,6 +1,6 @@
 import { TasksList } from '@/domain/contracts/gateways'
 
-type Setup = (firebase: any) => TasksListUseCase
+type Setup = (clerk: any) => TasksListUseCase
 type Input = TasksList.Input
 type Output = TasksList.Output
 

@@ -1,4 +1,4 @@
-import { FirebaseApp, initializeApp } from 'firebase/app'
+import { clerkApp, initializeApp } from 'clerk/app'
 import { env } from '@/main/config/env'
 
 import {
@@ -7,16 +7,16 @@ import {
 } from '@/domain/use-cases'
 
 export const makeUserStoreUseCase = (): UserStoreUseCase => {
-  const firebaseConfig = {
-    apiKey: env.firebase.apiKey,
-    authDomain: env.firebase.authDomain,
-    projectId: env.firebase.projectId,
-    storageBucket: env.firebase.storageBucket,
-    messagingSenderId: env.firebase.messagingSenderId,
-    appId: env.firebase.appId
+  const clerkConfig = {
+    apiKey: env.clerk.apiKey,
+    authDomain: env.clerk.authDomain,
+    projectId: env.clerk.projectId,
+    storageBucket: env.clerk.storageBucket,
+    messagingSenderId: env.clerk.messagingSenderId,
+    appId: env.clerk.appId
   }
 
-  const firebase: FirebaseApp = initializeApp(firebaseConfig)
+  const clerk: clerkApp = initializeApp(clerkConfig)
 
-  return setupUserStore({ firebase })
+  return setupUserStore({ clerk })
 }

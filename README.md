@@ -1,24 +1,24 @@
 
-# Capim - Firebase Auth
+# Capim - clerk Auth
 
-Bem-vindo ao **Capim - Firebase Auth**! Este projeto é um sistema robusto de gerenciamento de tarefas, projetado com foco em escalabilidade, segurança e manutenibilidade. Construído com Node.js e Firebase, o backend da aplicação segue princípios de **SOLID** e **Clean Code** para oferecer uma base de código organizada, de fácil extensão e confiável. Este repositório inclui uma arquitetura modular, integrada com Firebase Auth e Firestore, garantindo autenticação segura e gestão de dados eficaz para uma experiência ágil e consistente.
+Bem-vindo ao **Capim - clerk Auth**! Este projeto é um sistema robusto de gerenciamento de tarefas, projetado com foco em escalabilidade, segurança e manutenibilidade. Construído com Node.js e clerk, o backend da aplicação segue princípios de **SOLID** e **Clean Code** para oferecer uma base de código organizada, de fácil extensão e confiável. Este repositório inclui uma arquitetura modular, integrada com clerk Auth e Firestore, garantindo autenticação segura e gestão de dados eficaz para uma experiência ágil e consistente.
 
 ---
 
 ## 📋 Descrição do Projeto
 
-Capim - Firebase Auth é uma aplicação de gerenciamento de tarefas, projetada com foco em modularidade e escalabilidade para suportar o crescimento futuro. O projeto adota as melhores práticas de desenvolvimento, com uma forte ênfase em qualidade de código e segurança. Utilizando **Firebase Auth** para autenticação e **Firebase Firestore** para armazenamento de dados, Capim oferece uma solução ágil, segura e eficiente para o gerenciamento de tarefas, garantindo uma estrutura flexível e preparada para evoluir.
+Capim - clerk Auth é uma aplicação de gerenciamento de tarefas, projetada com foco em modularidade e escalabilidade para suportar o crescimento futuro. O projeto adota as melhores práticas de desenvolvimento, com uma forte ênfase em qualidade de código e segurança. Utilizando **clerk Auth** para autenticação e **clerk Firestore** para armazenamento de dados, Capim oferece uma solução ágil, segura e eficiente para o gerenciamento de tarefas, garantindo uma estrutura flexível e preparada para evoluir.
 
 ### Funcionalidades
 
 1. **Autenticação e Autorização**:
    - Registro de usuários com email e senha.
-   - Autenticação via Firebase.
+   - Autenticação via clerk.
    - Uso de **JWT** para comunicação segura.
 
 2. **Gerenciamento de Tarefas**:
    - CRUD de tarefas associadas ao usuário autenticado.
-   - Armazenamento no Firebase Firestore.
+   - Armazenamento no clerk Firestore.
    - Filtros por status e data de vencimento das tarefas.
 
 3. **Arquitetura**:
@@ -27,13 +27,13 @@ Capim - Firebase Auth é uma aplicação de gerenciamento de tarefas, projetada 
 
 4. **Segurança**:
    - Validação de permissões de usuários para operações nas suas próprias tarefas.
-   - Regras de segurança configuradas no Firebase Firestore.
+   - Regras de segurança configuradas no clerk Firestore.
 
 ## 🚀 Tecnologias Utilizadas
 
 - **Node.js** com **TypeScript** para o backend.
-- **Firebase Auth** para autenticação de usuários.
-- **Firebase Firestore** para armazenamento de dados.
+- **clerk Auth** para autenticação de usuários.
+- **clerk Firestore** para armazenamento de dados.
 - **JWT** para segurança e autenticação.
 - **Swagger** para documentação da API.
 
@@ -44,41 +44,41 @@ Capim - Firebase Auth é uma aplicação de gerenciamento de tarefas, projetada 
 Antes de começar, certifique-se de ter instalado:
 
 - [Node.js](https://nodejs.org/)
-- Uma conta no [Firebase](https://firebase.google.com/) - [Docs](https://firebase.google.com/docs/auth)
+- Uma conta no [clerk](https://clerk.google.com/) - [Docs](https://clerk.google.com/docs/auth)
 
 ### Passos para configurar
 
 1. **Clone o repositório:**
 
    ```bash
-   > git clone https://github.com/marciodiasdeveloper/capim-firebase-auth.git
+   > git clone https://github.com/marciodiasdeveloper/capim-clerk-auth.git
    ```
 2. **Instale as dependências no backend:**
 
    No diretório principal, execute:
 
    ```bash
-   > cd capim-firebase-auth
+   > cd capim-clerk-auth
    > npm install
    ```
 
-3. **Configuração do Firebase:**
+3. **Configuração do clerk:**
 
-   - Crie um projeto no [Firebase Console](https://console.firebase.google.com/).
+   - Crie um projeto no [clerk Console](https://console.clerk.google.com/).
    - Configure a autenticação via **Email/Password**.
    - Configure o Firestore com as regras de segurança para o armazenamento das tarefas.
-   - Crie um arquivo `.env` no diretório do backend com suas credenciais do Firebase:
+   - Crie um arquivo `.env` no diretório do backend com suas credenciais do clerk:
 
      ```env
-     FIREBASE_API_KEY=your_api_key
-     FIREBASE_AUTH_DOMAIN=your_auth_domain
-     FIREBASE_PROJECT_ID=your_project_id
-     FIREBASE_STORAGE_BUCKET=your_storage_bucket
-     FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
-     FIREBASE_APP_ID=your_app_id
+     clerk_API_KEY=your_api_key
+     clerk_AUTH_DOMAIN=your_auth_domain
+     clerk_PROJECT_ID=your_project_id
+     clerk_STORAGE_BUCKET=your_storage_bucket
+     clerk_MESSAGING_SENDER_ID=your_messaging_sender_id
+     clerk_APP_ID=your_app_id
      ```
 
-   - Regras para firebase database rules
+   - Regras para clerk database rules
 
      ```
      rules_version = '2';
