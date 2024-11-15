@@ -12,15 +12,15 @@ export const setupMiddlewares = (app: Express): void => {
   app.use(compression())
 
   const options = {
-    jwtKey: 'sua-chave-jwt-personalizada',
-    apiKeyId: process.env.CLERK_SECRET_KEY,
-    publishableKey: process.env.CLERK_PUBLISHABLE_KEY,
-    secretKey: process.env.CLERK_SECRET_KEY
+    // jwtKey: 'sua-chave-jwt-personalizada',
+    // apiKeyId: process.env.CLERK_API_KEY_ID,
+    // publishableKey: process.env.CLERK_PUBLISHABLE_KEY,
+    // secretKey: process.env.CLERK_SECRET_KEY
   }
 
   app.use(clerkMiddleware({ ...options }))
+
   setupSentry(app)
-  // app.use(clerkMiddleware(options))
   // app.use('/api/docs', swaggerExpres.serve, swaggerExpres.setup(swaggerFile))
   app.use((req, res, next) => {
     res.type('json')
