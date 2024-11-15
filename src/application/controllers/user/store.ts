@@ -19,9 +19,9 @@ export class UserStoreController extends Controller {
 
   override buildValidators (input: HttpRequest): Validator[] {
     return [
-      ...Builder.of({ value: input.displayName, fieldName: 'displayName' }).required().build(),
-      ...Builder.of({ value: input.phoneNumber, fieldName: 'phoneNumber' }).required().build(),
-      ...Builder.of({ value: input.email, fieldName: 'email' }).required().build(),
+      ...Builder.of({ value: input.displayName, fieldName: 'emailAddresses' }).required().build(),
+      ...Builder.of({ value: input.phoneNumber, fieldName: 'firstName' }).required().build(),
+      ...Builder.of({ value: input.email, fieldName: 'lastName' }).required().build(),
       ...Builder.of({ value: input.password, fieldName: 'password' }).required().build()
     ]
   }

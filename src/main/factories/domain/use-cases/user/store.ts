@@ -7,16 +7,9 @@ import {
 } from '@/domain/use-cases'
 
 export const makeUserStoreUseCase = (): UserStoreUseCase => {
-  const clerkConfig = {
-    apiKey: env.clerk.apiKey,
-    authDomain: env.clerk.authDomain,
-    projectId: env.clerk.projectId,
-    storageBucket: env.clerk.storageBucket,
-    messagingSenderId: env.clerk.messagingSenderId,
-    appId: env.clerk.appId
-  }
-
-  const clerk: clerkApp = initializeApp(clerkConfig)
+  const clerk = new Clerk({
+    apiKey: process.env.CLERK_API_KEY // Certifique-se de definir a variável de ambiente CLERK_API_KEY
+  })
 
   return setupUserStore({ clerk })
 }
