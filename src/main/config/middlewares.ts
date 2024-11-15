@@ -4,7 +4,7 @@ import compression from 'compression'
 // import swaggerExpres from 'swagger-ui-express'
 // import swaggerFile from '@/infra/documentation/swagger.json'
 import { setupSentry } from '@/main/factories/application/middlewares/sentry'
-import { clerkMiddleware, requireAuth } from '@clerk/express'
+import { clerkMiddleware } from '@clerk/express'
 
 export const setupMiddlewares = (app: Express): void => {
   app.use(cors())
@@ -17,7 +17,6 @@ export const setupMiddlewares = (app: Express): void => {
   }
 
   app.use(clerkMiddleware({ ...options }))
-  app.use(requireAuth())
   setupSentry(app)
   // app.use(clerkMiddleware(options))
   // app.use('/api/docs', swaggerExpres.serve, swaggerExpres.setup(swaggerFile))

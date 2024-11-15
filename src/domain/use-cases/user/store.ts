@@ -17,5 +17,7 @@ export const setupUserStore: Setup = () => async input => {
     password
   })
 
+  console.log(response)
+
   return response
 }
