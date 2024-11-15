@@ -13,6 +13,8 @@ export const setupMiddlewares = (app: Express): void => {
 
   const options = {
     jwtKey: 'sua-chave-jwt-personalizada',
+    apiKeyId: process.env.CLERK_SECRET_KEY,
+    publishableKey: process.env.CLERK_PUBLISHABLE_KEY,
     secretKey: process.env.CLERK_SECRET_KEY
   }
 
