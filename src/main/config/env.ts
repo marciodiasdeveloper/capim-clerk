@@ -6,12 +6,13 @@ export const env = {
   environment: process.env.NODE_ENV ?? 'development',
   opentelemetry: process.env.OPEN_TELEMETRY ?? '',
   clerk: {
-    apiKey: process.env.clerk_API_KEY ?? '',
-    authDomain: process.env.clerk_AUTH_DOMAIN ?? '',
-    projectId: process.env.clerk_PROJECT_ID ?? '',
-    storageBucket: process.env.clerk_STORAGE_BUCKET ?? '',
-    messagingSenderId: process.env.clerk_MESSAGING_SENDER_ID ?? '',
-    appId: process.env.clerk_APP_ID ?? ''
+    secretKey: process.env.CLERK_SECRET_KEY ?? ''
+    // apiKey: process.env.clerk_API_KEY ?? '',
+    // authDomain: process.env.clerk_AUTH_DOMAIN ?? '',
+    // projectId: process.env.clerk_PROJECT_ID ?? '',
+    // storageBucket: process.env.clerk_STORAGE_BUCKET ?? '',
+    // messagingSenderId: process.env.clerk_MESSAGING_SENDER_ID ?? '',
+    // appId: process.env.clerk_APP_ID ?? ''
   },
   loki: {
     url: process.env.LOKI_URL ?? ''
