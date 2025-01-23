@@ -1,7 +1,7 @@
 import { Router } from 'express'
 import { auth } from '@/main/middlewares'
 import { adaptExpressRoute as adapt } from '@/main/adapters'
-import { clerkMiddleware, getAuth, requireAuth } from '@clerk/express'
+import { requireAuth } from '@clerk/express'
 
 import {
   makeTasksListController,
